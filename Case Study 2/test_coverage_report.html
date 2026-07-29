@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module Test Coverage Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .module-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .status {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .passed { background: #dcfce7; color: #166534; }
+    .partial { background: #fef3c7; color: #92400e; }
+    .details {
+      margin: 0;
+      padding-left: 18px;
+      color: #4b5563;
+    }
+    .summary {
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Module Test Coverage Report</h1>
+  <div class="subtitle">Sample coverage view for the five telecom operation modules</div>
+
+  <div class="card">
+    <div class="module-name">Module 1 — Outage Detection</div>
+    <div class="status passed">Passed</div>
+    <div class="summary">Covers threshold-based outage detection and a fallback AI summary path.</div>
+    <ul class="details">
+      <li>Tests outage declaration when sensor thresholds are exceeded</li>
+      <li>Validates the output structure and severity classification</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="module-name">Module 2 — Technician Knowledge Assistant</div>
+    <div class="status passed">Passed</div>
+    <div class="summary">Covers retrieval of the correct procedural answer and bulletin precedence.</div>
+    <ul class="details">
+      <li>Ensures newer bulletin guidance is preferred over the older manual content</li>
+      <li>Validates source attribution and answer selection</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="module-name">Module 3 — Dispatch Workflow</div>
+    <div class="status passed">Passed</div>
+    <div class="summary">Covers technician assignment based on skill, availability, and location rules.</div>
+    <ul class="details">
+      <li>Confirms the best available technician is assigned</li>
+      <li>Validates the workflow status and assignment metadata</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="module-name">Module 4 — Outage Diagnostic Assistant</div>
+    <div class="status passed">Passed</div>
+    <div class="summary">Covers evidence-based diagnosis using maintenance, sensor, and weather checks.</div>
+    <ul class="details">
+      <li>Validates that a hypothesis is built from collected evidence</li>
+      <li>Ensures the assistant keeps the diagnostic state across steps</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="module-name">Module 5 — Mass Notification & NOC Escalation</div>
+    <div class="status passed">Passed</div>
+    <div class="summary">Covers escalation logic and customer message drafting for large outages.</div>
+    <ul class="details">
+      <li>Confirms escalation occurs for large or critical incidents</li>
+      <li>Validates that a customer-facing notification is produced</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="module-name">Overall Test Suite</div>
+    <div class="status passed">6 passed</div>
+    <div class="summary">All five modules are covered by automated tests, with one additional fallback test for OpenAI-disabled execution.</div>
+  </div>
+</body>
+</html>
